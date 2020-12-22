@@ -1,26 +1,47 @@
 function onLogin(cid)
 
 	-- AUTO MANA AND HP FIX--
-	local vocation = player:getVocation()
-	local level = player:getLevel()
-	local supposedhealth = 185 + (vocation:getHealthGain() * (level-8))
-	local supposedmana = 90 + (vocation:getManaGain() * (level-8))
-	local supposedcap = 47000 + (vocation:getCapacityGain() * (level-8))
-	if supposedhealth ~= player:getMaxHealth() then
-		--player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Server detected your max health was wrongly set at " .. player:getMaxHealth() .. " and we adjusted it to " .. supposedhealth .. " automatically.")
-		player:setMaxHealth(supposedhealth)
-		player:setHealth(supposedhealth)
-	end
-	if supposedhealth ~= player:getMaxMana() then
-		--player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Server detected your max mana was wrongly set at " .. player:getMaxMana() .. " and we adjusted it to " .. supposedmana .. " automatically.")
-		player:setMaxMana(supposedmana)
-		player:setMana(supposedmana)
-	end
-	if supposedcap ~= player:getCapacity() then
-		-- player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Server detected your max capacity was wrongly set at " .. (player:getCapacity() / 100) .. " and we adjusted it to " .. supposedcap/100 .. " automatically.")
-		player:setCapacity(supposedcap)
-	end
-	-- player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "For level " .. player:getLevel() .. ", your max HP should be: " .. supposedhealth .. " max mana should be: " .. supposedmana .. " max cap should be: " .. supposedcap .. ".")
+-- Fix HP/Mana/Cap to match CIP, assume player left rook at level 8
+    if getPlayerVocation(cid) == 0 then
+        
+        calchp = 5 * (getPlayerLevel(cid) + 29)
+        calcmana = 5 * (getPlayerLevel(cid) + 10)
+        calccap = 10 * (getPlayerLevel(cid) + 39)
+        
+    elseif getPlayerVocation(cid) == 1 or getPlayerVocation(cid) == 5 then
+        
+        calchp = 5 * (getPlayerLevel(cid) + 29)
+        calcmana = 5 * ((6 * getPlayerLevel(cid)) - (5 * 8) + 10)
+        calccap = 10 * (getPlayerLevel(cid) + 39)
+        
+    elseif getPlayerVocation(cid) == 2 or getPlayerVocation(cid) == 6 then
+        
+        calchp = 5 * (getPlayerLevel(cid) + 29)
+        calcmana = 5 * ((6 * getPlayerLevel(cid)) - (5 * 8) + 10)
+        calccap = 10 * (getPlayerLevel(cid) + 39)
+        
+    elseif getPlayerVocation(cid) == 3 or getPlayerVocation(cid) == 7 then
+        
+        calchp = 5 * ((2 * getPlayerLevel(cid)) - 8 + 29)
+        calcmana = 5 * ((3 * getPlayerLevel(cid))- (2 * 8) + 10)
+        calccap = 10 * ((2 * getPlayerLevel(cid)) - 8 + 39)
+        
+    elseif getPlayerVocation(cid) == 4 or getPlayerVocation(cid) == 8 then
+        
+        calchp = 5 *((3 * getPlayerLevel(cid)) - (2 * 8) + 29)
+        calcmana = 5 *(getPlayerLevel(cid) + 10)
+        calccap = 5 *((5 * getPlayerLevel(cid)) - (5 * 8) + 94)
+        
+    end   
+
+		setPlayermaxHealth(cid, calchp)
+		doCreatureAddHealth(cid, getCreatureMaxHealth(cid), false)
+		doCreatureSetMaxMana(cid, calcmana)
+		doCreatureAddMana(cid, getCreatureMaxMana(cid), false)
+    
+    
+	doPlayerSetMaxCapacity(cid, calccap) 
+    
 	-- END OF AUTO MANA E HP FIX--
 	
 	local events = {
