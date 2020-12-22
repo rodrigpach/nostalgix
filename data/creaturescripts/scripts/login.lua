@@ -1,5 +1,28 @@
 function onLogin(cid)
 
+	-- AUTO MANA AND HP FIX--
+	local vocation = player:getVocation()
+	local level = player:getLevel()
+	local supposedhealth = 185 + (vocation:getHealthGain() * (level-8))
+	local supposedmana = 90 + (vocation:getManaGain() * (level-8))
+	local supposedcap = 47000 + (vocation:getCapacityGain() * (level-8))
+	if supposedhealth ~= player:getMaxHealth() then
+		--player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Server detected your max health was wrongly set at " .. player:getMaxHealth() .. " and we adjusted it to " .. supposedhealth .. " automatically.")
+		player:setMaxHealth(supposedhealth)
+		player:setHealth(supposedhealth)
+	end
+	if supposedhealth ~= player:getMaxMana() then
+		--player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Server detected your max mana was wrongly set at " .. player:getMaxMana() .. " and we adjusted it to " .. supposedmana .. " automatically.")
+		player:setMaxMana(supposedmana)
+		player:setMana(supposedmana)
+	end
+	if supposedcap ~= player:getCapacity() then
+		-- player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Server detected your max capacity was wrongly set at " .. (player:getCapacity() / 100) .. " and we adjusted it to " .. supposedcap/100 .. " automatically.")
+		player:setCapacity(supposedcap)
+	end
+	-- player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "For level " .. player:getLevel() .. ", your max HP should be: " .. supposedhealth .. " max mana should be: " .. supposedmana .. " max cap should be: " .. supposedcap .. ".")
+	-- END OF AUTO MANA E HP FIX--
+	
 	local events = {
 		"RemoveBlesses", --Register the kill/die event
 		-- "Give_Bag_After_Death", --Register the Give_Bag_After_Death event not default
