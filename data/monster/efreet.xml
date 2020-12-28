@@ -75,7 +75,6 @@
 		<item id="1987" chance="100000"><!-- bag -->
 			<inside>
 				<item id="2442" chance="20000"/><!-- 20% heavy machete -->
-				<item id="2187" chance="500"/><!-- 0.5% wand of inferno -->
 			</inside>
 		</item>
 	</loot>

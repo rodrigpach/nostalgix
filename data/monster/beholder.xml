@@ -66,7 +66,6 @@
 				<item id="2377" chance="4000"/><!-- 4% two handed sword -->
 				<item id="2397" chance="9000"/><!-- 9% longsword -->
 				<item id="2394" chance="7000"/><!-- 7% morning star -->
-				<item id="2181" chance="500"/><!-- 0.5% quagmire rod -->
 				<item id="2509" chance="4000"/><!-- 4% steel shield -->
 				<item id="2512" chance="3000"/><!-- 3% wooden shield -->
 				<item id="2518" chance="100"/><!-- 0.1% beholder shield -->

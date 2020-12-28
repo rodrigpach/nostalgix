@@ -57,7 +57,6 @@
 			<inside>
 				<item id="2389" chance="10000"/><!-- 10% spear -->
 				<item id="2401" chance="7000"/><!-- 7% staff -->
-				<item id="2188" chance="1000"/><!-- 1% wand of plague -->
 				<item id="1973" chance="4500"/><!-- 4.5% grey small book -->
 			</inside>
 		</item>

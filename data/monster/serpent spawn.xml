@@ -72,7 +72,6 @@
 		<item id="1987" chance="100000"><!-- bag -->
 			<inside>
 				<item id="2392" chance="300"/><!-- 0.3% fire sword -->
-				<item id="2182" chance="1000"/><!-- 1% snakebite rod -->
 				<item id="2528" chance="400"/><!-- 0.4% tower shield -->
 				<item id="2168" chance="3000"/><!-- 3% life ring -->
 				<item id="2167" chance="3000"/><!-- 3% energy ring -->
