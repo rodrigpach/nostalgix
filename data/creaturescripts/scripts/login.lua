@@ -1,49 +1,5 @@
 function onLogin(cid)
 
-	-- AUTO MANA AND HP FIX--
--- Fix HP/Mana/Cap to match CIP, assume player left rook at level 8
-    if getPlayerVocation(cid) == 0 then
-        
-        calchp = 5 * (getPlayerLevel(cid) + 29)
-        calcmana = 5 * (getPlayerLevel(cid) + 10)
-        calccap = 10 * (getPlayerLevel(cid) + 39)
-        
-    elseif getPlayerVocation(cid) == 1 or getPlayerVocation(cid) == 5 then
-        
-        calchp = 5 * (getPlayerLevel(cid) + 29)
-        calcmana = 5 * ((6 * getPlayerLevel(cid)) - (5 * 8) + 10)
-        calccap = 10 * (getPlayerLevel(cid) + 39)
-        
-    elseif getPlayerVocation(cid) == 2 or getPlayerVocation(cid) == 6 then
-        
-        calchp = 5 * (getPlayerLevel(cid) + 29)
-        calcmana = 5 * ((6 * getPlayerLevel(cid)) - (5 * 8) + 10)
-        calccap = 10 * (getPlayerLevel(cid) + 39)
-        
-    elseif getPlayerVocation(cid) == 3 or getPlayerVocation(cid) == 7 then
-        
-        calchp = 5 * ((2 * getPlayerLevel(cid)) - 8 + 29)
-        calcmana = 5 * ((3 * getPlayerLevel(cid))- (2 * 8) + 10)
-        calccap = 10 * ((2 * getPlayerLevel(cid)) - 8 + 39)
-        
-    elseif getPlayerVocation(cid) == 4 or getPlayerVocation(cid) == 8 then
-        
-        calchp = 5 *((3 * getPlayerLevel(cid)) - (2 * 8) + 29)
-        calcmana = 5 *(getPlayerLevel(cid) + 10)
-        calccap = 5 *((5 * getPlayerLevel(cid)) - (5 * 8) + 94)
-        
-    end   
-
-		setPlayermaxHealth(cid, calchp)
-		doCreatureAddHealth(cid, getCreatureMaxHealth(cid), false)
-		doCreatureSetMaxMana(cid, calcmana)
-		doCreatureAddMana(cid, getCreatureMaxMana(cid), false)
-    
-    
-	doPlayerSetMaxCapacity(cid, calccap) 
-    
-	-- END OF AUTO MANA E HP FIX--
-	
 	local events = {
 		"RemoveBlesses", --Register the kill/die event
 		-- "Give_Bag_After_Death", --Register the Give_Bag_After_Death event not default

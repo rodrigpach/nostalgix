@@ -60,12 +60,14 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 			end
 			doCreatureSay(cid, "Aaaah...", TALKTYPE_SAY)
 			doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
+			doRemoveItem(item.uid, 1)
 		elseif(item.type == FLUID_LIFE) then
 			if not doCombat(cid, lifeFluidCombat, numberToVariant(cid)) then
 				return false
 			end
 			doCreatureSay(cid, "Aaaah...", TALKTYPE_SAY)
 			doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
+			doRemoveItem(item.uid, 1)
 		elseif(isInArray(alcoholDrinks, item.type) ) then
 			if not doTargetCombatCondition(0, cid, drunk, CONST_ME_NONE) then
 				return false

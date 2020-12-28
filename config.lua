@@ -20,10 +20,10 @@ map_store_type = "binary"
 mapkind = "OTBM"
 
 -- server name
-servername = "OTServ"
+servername = "Nostalgix"
 
 -- server location
-location = "Solar System"
+location = "Sao Paulo BR"
 
 -- server ip (the ip that server listens on)
 ip = "45.178.181.137"
@@ -46,23 +46,23 @@ status_port = "7171"
 admin_port = "7171"
 
 -- server url
-url = "http://otland.net"
+url = "http://nostalgix.com.br"
 
 -- server owner name
-ownername = "peonso"
+ownername = "ADM Sbrubles"
 
 -- server owner email
-owneremail = ""
+owneremail = "adm@nostalgix.com.br"
 
 -- world name
-worldname = "Legacy Server"
+worldname = "Nostalgy"
 
 -- world type
 -- options: openpvp/pvp, optionalpvp/no-pvp, hardcorepvp/pvp-enforced
 worldtype = "pvp"
 
 -- Auto Stack items in containers (like in newer Tibia versions)
-container_items_auto_stack = false
+container_items_auto_stack = true
 
 -- does player rate (from lua functions) count on experience gained from killings players on pvp-e worlds?
 rates_for_player_killing = false
@@ -86,10 +86,10 @@ exhaustedadd = 5000
 in_fight_duration = 60000
 
 -- how long a field belongs to a player before it no longer causes PZ lock for the owner
-field_ownership_duration = 5000
+field_ownership_duration = 15000
 
 -- When a player dies, how many of the assisting players (ie. how many of those who made damage) should be stored in database?
-death_assist_count = 10
+death_assist_count = 2
 
 -- Should only the player who did the last hit get the 15-minute pz lock?
 last_hit_pzblock_only = true
@@ -102,7 +102,7 @@ minactionexinterval = 1000
 
 -- house rent period
 -- options: daily, weekly, monthly
-houserentperiod = "monthly"
+houserentperiod = "weekly"
 
 -- whether or not to check for premium accounts when using beds
 premonlybeds = true
@@ -111,7 +111,7 @@ premonlybeds = true
 use_balance_house_paying = false
 
 -- How long time the red skull will last in seconds (default 30 days)
-red_skull_duration = 30*24*60*60
+red_skull_duration = 4*24*60*60
 
 -- White skull duration, how long a player will get pz locked/white skull
 unjust_skull_duration = 15*60*1000
@@ -121,11 +121,11 @@ defensive_pz_lock = true
 
 -- How many players you need to kill to gain a red skull per day/week/month
 -- Set 0 to disable
-kills_per_day_red_skull = 3
-kills_per_week_red_skull = 5
-kills_per_month_red_skull = 10
+kills_per_day_red_skull = 4
+kills_per_week_red_skull = 8
+kills_per_month_red_skull = 15
 -- In Oldschool you would get banned by doubling the needed month unjustified kills for red skull
-kills_to_ban = 20
+kills_to_ban = 30
 
 -- Broadcast violation window banishments
 broadcast_banishments = "no"
@@ -140,7 +140,7 @@ final_banishment_length = 30*86400 --seconds
 ip_banishment_length = 86400 --seconds
 
 -- Extra experience % per player when sharing experience
-party_exp_mul = 5
+party_exp_mul = 10
 
 -- Anti-MageBomb system
 -- This system works as in Tibia, time in milliseconds
@@ -153,15 +153,15 @@ max_idle_time = 16*60*1000
 max_idle_time_warning = 15*60*1000
 
 -- Exp Stages configuration is in /data/exp_stages.lua
-experience_stages = false
+experience_stages = true
 
 -- rates (experience, skill, magic level, loot and spawn)
-rate_exp = 10
+rate_exp = 1
 rate_exp_pvp = 0
-rate_skill = 1
-rate_mag = 1
+rate_skill = 5
+rate_mag = 2
 rate_loot = 1
-rate_spawn = 1
+rate_spawn = 2
 
 -- Rookgaard system
 -- level_to_rook if player reach this level he is sento to newbie island at level 1
@@ -234,7 +234,7 @@ house_tile_limit = 0
 
 -- fist fighting configuration
 -- How strong should be the attack using bare hands (fist fighting)?
-fist_strength = 7
+fist_strength = 5
 
 -- Allow gamemaster multiclient login to everybody?
 allow_gamemaster_multiclient = true
@@ -263,7 +263,7 @@ min_pvp_level_applies_to_summons = true
 push_interval = 2000
 
 -- How many milliseconds a player should wait until he can move another item after moving one (0 disables it)
-move_item_interval = 500
+move_item_interval = 0
 
 -- max number of messages a player can say before getting muted (default 4), set to 0 to disable muting
 maxmessagebuffer = 4
@@ -273,11 +273,11 @@ maxmessagebuffer = 4
 lua_excepted_type_errors_enabled = false
 
 -- motd (the message box that you sometimes get before you choose characters)
-motd = "Welcome to Tibia Legacy Server."
+motd = "Welcome to Nostalgix"
 motdnum = "1"
 
 -- login message
-loginmsg = "Welcome to Tibia."
+loginmsg = "Welcome to Nostalgy."
 
 -- how many logins attempts until ip is temporary disabled
 -- set to 0 to disable
@@ -323,14 +323,14 @@ passwordsalt = ""
 
 -- House configuration (game_class)
 -- House tile price
-house_tile_price = 100
+house_tile_price = 200
 -- Only premium players can buy houses?
 house_only_premium = true
 -- Level to buy houses
-house_level = 1
+house_level = 30
 -- Show house price and its rent price when looking at its door?
 -- PS: This info is going to be shown just if house has no owner
-show_house_prices = false
+show_house_prices = true
 
 -- SQL type
 -- options: mysql, sqlite, odbc or pgsql
