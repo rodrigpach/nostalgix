@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="merlkin" nameDescription="a merlkin" race="blood" experience="135" speed="194" manacost="0">
+<monster name="Merlkin" nameDescription="a merlkin" race="blood" experience="135" speed="194" manacost="0">
 	<health now="230" max="230"/>
 	<look type="117" corpse="4271"/>
 	<targetchange interval="1000" chance="50"/>

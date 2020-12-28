@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="crocodile" nameDescription="a crocodile" race="blood" experience="40" speed="158" manacost="350">
+<monster name="Crocodile" nameDescription="a crocodile" race="blood" experience="40" speed="158" manacost="350">
 	<health now="105" max="105"/>
 	<look type="119" corpse="4277"/>
 	<targetchange interval="1000" chance="5"/>

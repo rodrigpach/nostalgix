@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="witch" nameDescription="a witch" race="blood" experience="120" speed="204" manacost="0">
+<monster name="Witch" nameDescription="a witch" race="blood" experience="120" speed="204" manacost="0">
 	<health now="300" max="300"/>
 	<look type="54" corpse="3065"/>
 	<targetchange interval="1000" chance="50"/>
@@ -54,7 +54,6 @@
 			<inside>
 				<item id="2405" chance="40000"/><!-- 40% sickle -->
 				<item id="2402" chance="500"/><!-- 0.5% silver dagger -->
-				<item id="2185" chance="1000"/><!-- 1% volcanic rod -->
 				<item id="2199" chance="2500"/><!-- 2.5% garlic necklace -->
 			</inside>
 		</item>

@@ -15,6 +15,10 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 	
 	doPlayerFeed(cid, size)
 	doRemoveItem(item.uid, 1)
+<<<<<<< Updated upstream
 --	doPlayerSay(cid, sound, TALKTYPE_SAY)
+=======
+	--doPlayerSay(cid, sound, TALKTYPE_SAY)
+>>>>>>> Stashed changes
 	return true
 end

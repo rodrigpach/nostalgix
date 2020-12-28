@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="centipede" nameDescription="a centipede" race="venom" experience="30" speed="166" manacost="335">
+<monster name="Centipede" nameDescription="a centipede" race="venom" experience="30" speed="166" manacost="335">
 	<health now="70" max="70"/>
 	<look type="124" corpse="4289"/>
 	<targetchange interval="1000" chance="6"/>
