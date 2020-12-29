@@ -3,10 +3,5 @@
 
 	<globalevent name="StartUp" type="startup" script="startup.lua"/>
 	<globalevent name="ServerSave" time="06:00:00" script="serversave.lua"/>
-<<<<<<< Updated upstream
 	<globalevent name="gesior-shop-system" interval="30000" script="gesior-shop-system.lua" />
 </globalevents>
-=======
-
-</globalevents>
->>>>>>> Stashed changes

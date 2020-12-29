@@ -61,7 +61,6 @@
 		<skill id="6" base="20" multiplier="1.1"/>
 	</vocation>
 	<vocation id="5" name="Master Sorcerer" description="a master sorcerer" gaincap="10" gainhp="5" gainmana="30" gainhpticks="6" gainhpamount="1" gainmanaticks="3" gainmanaamount="3" maxsoul="200" gainsoulticks="15" manamultiplier="1.1" attackspeed="2000">
-	<vocation id="5" name="Master Sorcerer" description="a master sorcerer" gaincap="10" gainhp="5" gainmana="30" gainhpticks="6" gainhpamount="2" gainmanaticks="3" gainmanaamount="3" maxsoul="200" gainsoulticks="15" manamultiplier="1.1" attackspeed="2000">
 		<damage magicDamage="1.0" wandDamage="1.0" healingDamage="1.0" />
 		<meleeDamage sword="1.0" axe="1.0" club="1.0" dist="1.0" fist="1.0" />
 		<defense baseDefense="1.0" armorDefense="1.0" />
